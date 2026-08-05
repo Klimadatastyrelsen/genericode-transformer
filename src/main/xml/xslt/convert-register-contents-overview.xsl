@@ -122,11 +122,11 @@
                 </xsl:when>
                 <xsl:otherwise>
                     <nav class="ds-nav ds-container ds-pt-xxs ds-pb-xxs">
-                        <a class="active" href="../index.html">
+                        <a href="../index.html">
                             <xsl:value-of select="$registerRootName" />
                         </a>
                         <xsl:call-template name="breadcrumbSeperator" />
-                        <a href="../index.html">
+                        <a class="active" href="../index.html">
                             <xsl:variable name="segments" select="tokenize($code-list-subregister-uri, '/')" />
                             <xsl:variable name="rootIndex" select="index-of($segments, lower-case($registerRootName))" />
                             <xsl:value-of select="$segments[$rootIndex + 1]" />
